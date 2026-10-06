@@ -14,6 +14,7 @@
  */
 
 //% color="#00796B" icon="\uf11b" block="GamePad V4"
+//% block.loc.pl="GamePad V4"
 namespace gamepadV4 {
     export enum Button {
         //% block="C"
@@ -25,19 +26,25 @@ namespace gamepadV4 {
         //% block="F"
         F = 3,
         //% block="joystick"
+        //% block.loc.pl="joystick"
         Joystick = 4
     }
 
     export enum Direction {
         //% block="center"
+        //% block.loc.pl="środek"
         Center = 0,
         //% block="up"
+        //% block.loc.pl="góra"
         Up = 1,
         //% block="down"
+        //% block.loc.pl="dół"
         Down = 2,
         //% block="left"
+        //% block.loc.pl="lewo"
         Left = 3,
         //% block="right"
+        //% block.loc.pl="prawo"
         Right = 4
     }
 
@@ -200,6 +207,8 @@ namespace gamepadV4 {
 
     /** Initialize the gamepad pins and event monitor. */
     //% blockId=dfrobot_gamepad_v4_init block="initialize GamePad V4"
+    //% block.loc.pl="zainicjalizuj GamePad V4"
+    //% jsdoc.loc.pl="Inicjalizuje piny gamepada i uruchamia obsługę zdarzeń."
     //% weight=100
     export function initialize(): void {
         startMonitor()
@@ -207,6 +216,8 @@ namespace gamepadV4 {
 
     /** Run code once for each debounced button press. */
     //% blockId=dfrobot_gamepad_v4_on_button_pressed block="on GamePad button %button pressed"
+    //% block.loc.pl="kiedy przycisk GamePada %button zostanie naciśnięty"
+    //% jsdoc.loc.pl="Uruchamia kod jeden raz dla każdego poprawnie odfiltrowanego naciśnięcia przycisku."
     //% weight=95
     export function onButtonPressed(button: Button, handler: () => void): void {
         startMonitor()
@@ -215,6 +226,8 @@ namespace gamepadV4 {
 
     /** Return true while a button is physically held down. */
     //% blockId=dfrobot_gamepad_v4_is_pressed block="GamePad button %button is pressed"
+    //% block.loc.pl="przycisk GamePada %button jest naciśnięty"
+    //% jsdoc.loc.pl="Zwraca prawdę, gdy wybrany przycisk jest aktualnie wciśnięty."
     //% weight=90
     export function isPressed(button: Button): boolean {
         ensureInitialized()
@@ -223,6 +236,8 @@ namespace gamepadV4 {
 
     /** Run code once when the joystick enters a direction. */
     //% blockId=dfrobot_gamepad_v4_on_joystick block="on joystick moved %direction"
+    //% block.loc.pl="kiedy joystick zostanie wychylony %direction"
+    //% jsdoc.loc.pl="Uruchamia kod jeden raz, gdy joystick wejdzie w wybrany kierunek."
     //% weight=85
     export function onJoystick(direction: Direction, handler: () => void): void {
         startMonitor()
@@ -234,6 +249,8 @@ namespace gamepadV4 {
 
     /** Return the raw joystick X position, 0..1023. */
     //% blockId=dfrobot_gamepad_v4_joystick_x block="joystick X"
+    //% block.loc.pl="pozycja joysticka X"
+    //% jsdoc.loc.pl="Zwraca surową pozycję osi X joysticka w zakresie 0..1023."
     //% weight=80
     export function joystickX(): number {
         ensureInitialized()
@@ -242,6 +259,8 @@ namespace gamepadV4 {
 
     /** Return the raw joystick Y position, 0..1023. */
     //% blockId=dfrobot_gamepad_v4_joystick_y block="joystick Y"
+    //% block.loc.pl="pozycja joysticka Y"
+    //% jsdoc.loc.pl="Zwraca surową pozycję osi Y joysticka w zakresie 0..1023."
     //% weight=79
     export function joystickY(): number {
         ensureInitialized()
@@ -250,6 +269,8 @@ namespace gamepadV4 {
 
     /** Return the current joystick direction using hysteresis. */
     //% blockId=dfrobot_gamepad_v4_direction block="joystick direction"
+    //% block.loc.pl="kierunek joysticka"
+    //% jsdoc.loc.pl="Zwraca aktualny kierunek joysticka z zastosowaniem histerezy."
     //% weight=78
     export function direction(): Direction {
         ensureInitialized()
@@ -260,6 +281,8 @@ namespace gamepadV4 {
 
     /** Configure joystick thresholds and center hysteresis. */
     //% blockId=dfrobot_gamepad_v4_thresholds block="set joystick thresholds low %low high %high center low %newCenterLow center high %newCenterHigh"
+    //% block.loc.pl="ustaw progi joysticka niski %low wysoki %high środek niski %newCenterLow środek wysoki %newCenterHigh"
+    //% jsdoc.loc.pl="Ustawia progi kierunków joysticka oraz zakres histerezy środka."
     //% low.min=0 low.max=1023 low.defl=300
     //% high.min=0 high.max=1023 high.defl=700
     //% newCenterLow.min=0 newCenterLow.max=1023 newCenterLow.defl=400
@@ -280,6 +303,8 @@ namespace gamepadV4 {
 
     /** Set vibration/LED strength on P12, from 0 to 1023. */
     //% blockId=dfrobot_gamepad_v4_vibration_strength block="set vibration strength %strength"
+    //% block.loc.pl="ustaw siłę wibracji %strength"
+    //% jsdoc.loc.pl="Ustawia siłę wibracji i jasność wspólnej diody na P12 w zakresie 0..1023."
     //% strength.min=0 strength.max=1023 strength.defl=300
     //% weight=70
     export function setVibrationStrength(strength: number): void {
@@ -291,6 +316,8 @@ namespace gamepadV4 {
 
     /** Vibrate with selected strength for the given time. */
     //% blockId=dfrobot_gamepad_v4_vibrate block="vibrate strength %strength for %duration ms"
+    //% block.loc.pl="wibruj z siłą %strength przez %duration ms"
+    //% jsdoc.loc.pl="Uruchamia wibrację z wybraną siłą przez podany czas."
     //% strength.min=0 strength.max=1023 strength.defl=300
     //% duration.min=1 duration.max=5000 duration.defl=200
     //% weight=69
@@ -302,6 +329,8 @@ namespace gamepadV4 {
 
     /** Stop vibration and turn off the P12 LED. */
     //% blockId=dfrobot_gamepad_v4_stop_vibration block="stop vibration"
+    //% block.loc.pl="zatrzymaj wibrację"
+    //% jsdoc.loc.pl="Zatrzymuje wibrację i wyłącza diodę sterowaną przez P12."
     //% weight=68
     export function stopVibration(): void {
         ensureInitialized()
@@ -310,6 +339,8 @@ namespace gamepadV4 {
 
     /** Play a tone on the gamepad buzzer connected to P0. */
     //% blockId=dfrobot_gamepad_v4_beep block="beep %frequency Hz for %duration ms"
+    //% block.loc.pl="zagraj dźwięk %frequency Hz przez %duration ms"
+    //% jsdoc.loc.pl="Odtwarza ton na buzzerze gamepada podłączonym do P0."
     //% frequency.min=20 frequency.max=12000 frequency.defl=440
     //% duration.min=1 duration.max=5000 duration.defl=100
     //% weight=60

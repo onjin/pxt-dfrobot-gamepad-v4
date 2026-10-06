@@ -78,3 +78,16 @@ Domyślne progi joysticka to 300/700, z histerezą powrotu 400/600. Można je zm
 ## Licencja
 
 MIT
+
+## Polish localization
+
+The extension includes Polish translations for Visual Blocks directly in `main.ts` using MakeCode `block.loc.pl` and `jsdoc.loc.pl` metadata. When the MakeCode editor language is Polish, block labels and help text are displayed in Polish automatically.
+
+## Polish localization
+
+Polish Visual Blocks and help strings are included in:
+
+- `_locales/pl/dfrobot-gamepad-v4-strings.json`
+- `_locales/pl/dfrobot-gamepad-v4-jsdoc-strings.json`
+
+The source also keeps `block.loc.pl` / `jsdoc.loc.pl` annotations as a fallback.
