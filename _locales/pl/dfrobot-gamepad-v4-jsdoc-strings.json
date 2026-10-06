@@ -1,0 +1,14 @@
+{
+  "gamepadV4.initialize": "Inicjalizuje piny gamepada i uruchamia obsługę zdarzeń.",
+  "gamepadV4.onButtonPressed": "Uruchamia kod jeden raz dla każdego poprawnie odfiltrowanego naciśnięcia przycisku.",
+  "gamepadV4.isPressed": "Zwraca prawdę, gdy wybrany przycisk jest aktualnie wciśnięty.",
+  "gamepadV4.onJoystick": "Uruchamia kod jeden raz, gdy joystick wejdzie w wybrany kierunek.",
+  "gamepadV4.joystickX": "Zwraca surową pozycję osi X joysticka w zakresie 0..1023.",
+  "gamepadV4.joystickY": "Zwraca surową pozycję osi Y joysticka w zakresie 0..1023.",
+  "gamepadV4.direction": "Zwraca aktualny kierunek joysticka z zastosowaniem histerezy.",
+  "gamepadV4.setJoystickThresholds": "Ustawia progi kierunków joysticka oraz zakres histerezy środka.",
+  "gamepadV4.setVibrationStrength": "Ustawia siłę wibracji i jasność wspólnej diody na P12 w zakresie 0..1023.",
+  "gamepadV4.vibrate": "Uruchamia wibrację z wybraną siłą przez podany czas.",
+  "gamepadV4.stopVibration": "Zatrzymuje wibrację i wyłącza diodę sterowaną przez P12.",
+  "gamepadV4.beep": "Odtwarza ton na buzzerze gamepada podłączonym do P0."
+}

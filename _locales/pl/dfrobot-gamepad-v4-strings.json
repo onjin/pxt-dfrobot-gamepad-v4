@@ -1,0 +1,21 @@
+{
+  "gamepadV4|block": "GamePad V4",
+  "gamepadV4.Button.Joystick|block": "joystick",
+  "gamepadV4.Direction.Center|block": "środek",
+  "gamepadV4.Direction.Up|block": "góra",
+  "gamepadV4.Direction.Down|block": "dół",
+  "gamepadV4.Direction.Left|block": "lewo",
+  "gamepadV4.Direction.Right|block": "prawo",
+  "gamepadV4.initialize|block": "zainicjalizuj GamePad V4",
+  "gamepadV4.onButtonPressed|block": "kiedy przycisk GamePada %button zostanie naciśnięty",
+  "gamepadV4.isPressed|block": "przycisk GamePada %button jest naciśnięty",
+  "gamepadV4.onJoystick|block": "kiedy joystick zostanie wychylony %direction",
+  "gamepadV4.joystickX|block": "pozycja joysticka X",
+  "gamepadV4.joystickY|block": "pozycja joysticka Y",
+  "gamepadV4.direction|block": "kierunek joysticka",
+  "gamepadV4.setJoystickThresholds|block": "ustaw progi joysticka niski %low wysoki %high środek niski %newCenterLow środek wysoki %newCenterHigh",
+  "gamepadV4.setVibrationStrength|block": "ustaw siłę wibracji %strength",
+  "gamepadV4.vibrate|block": "wibruj z siłą %strength przez %duration ms",
+  "gamepadV4.stopVibration|block": "zatrzymaj wibrację",
+  "gamepadV4.beep|block": "zagraj dźwięk %frequency Hz przez %duration ms"
+}
