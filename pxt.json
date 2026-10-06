@@ -1,0 +1,19 @@
+{
+  "name": "dfrobot-gamepad-v4",
+  "version": "0.1.0",
+  "description": "MakeCode extension for DFRobot micro:GamePad V4 on BBC micro:bit",
+  "license": "MIT",
+  "dependencies": {
+    "core": "*"
+  },
+  "files": [
+    "main.ts",
+    "README.md"
+  ],
+  "testFiles": [
+    "test.ts"
+  ],
+  "supportedTargets": [
+    "microbit"
+  ]
+}
